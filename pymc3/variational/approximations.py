@@ -25,7 +25,7 @@ from pymc3.blocking import DictToArrayBijection
 from pymc3.distributions.dist_math import rho2sigma
 from pymc3.math import batched_diag
 from pymc3.variational import flows, opvi
-from pymc3.variational.opvi import Approximation, Group, node_property
+from pymc3.variational.opvi import Approximation, Group, node_property, NotImplementedInference
 
 __all__ = ["MeanField", "FullRank", "Empirical", "NormalizingFlow", "sample_approx"]
 
@@ -346,6 +346,7 @@ class NormalizingFlowGroup(Group):
 
     @aesara.config.change_flags(compute_test_value="off")
     def __init_group__(self, group):
+        raise NotImplementedInference("Normalizing flows are not yet ported to v4")
         super().__init_group__(group)
         # objects to be resolved
         # 1. string formula
