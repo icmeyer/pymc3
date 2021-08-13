@@ -44,10 +44,7 @@ import yaml
 EXCLUDE = {
     "pip",
     "python",
-    "libblas",
     "libpython",
-    "m2w64-toolchain",
-    "mkl-service",
     "numba",
     "scipy",
     "python-graphviz",
