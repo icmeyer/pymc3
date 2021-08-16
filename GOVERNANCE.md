@@ -1,22 +1,24 @@
 # Main Governance Document
 
+## The Project
 
-The Project
-===========
-
-The PyMC3 Project (The Project) is an open source software project
+The PyMC Project (The Project) is an open source software project
 affiliated with the 501c3 NumFocus Foundation. The goal of The Project is to
 develop open source software and deploy open and public websites and services
 for reproducible, exploratory and interactive computing. The Software developed
 by The Project is released under the Apache 2 open source license,
 developed openly and hosted in public GitHub repositories under the
 [GitHub organization](https://github.com/pymc-devs/pymc3). Examples of
-Project Software include the PyMC3 code and the Documentation, etc. The Services run by the
-Project consist of public websites and web-services that are hosted
-at [http://pymc-devs.github.io/pymc3/](http://pymc-devs.github.io/pymc3/)
+Project Software include the PyMC3 library and its documentation, etc.
+The Services run by the Project consist of public websites and web-services
+that are hosted at [http://docs.pymc.io](http://docs.pymc.io)
+
 The Project is developed by a team of distributed developers, called
 Contributors. Contributors are individuals who have contributed code,
-documentation, designs or other work to one or more Project repositories.
+documentation, designs or other work to one or more Project repositories,
+or who have done significant work to empower the Community,
+moderating on [Discourse](),
+organizing [PyMCon]() or helped on other platforms and events.
 Anyone can be a Contributor. Contributors can be affiliated with any legal
 entity or none. Contributors participate in the project by submitting,
 reviewing and discussing GitHub Pull Requests and Issues and participating in
@@ -37,7 +39,7 @@ manage project donations and acts as a parent legal entity. NumFOCUS is the
 only legal entity that has a formal relationship with the project (see
 Institutional Partners section below).
 
-### Governance
+## Governance
 
 This section describes the governance and leadership model of The Project.
 
@@ -48,7 +50,7 @@ The foundations of Project governance are:
 -   Institutional Neutrality
 
 Traditionally, Project leadership was provided by a BDFL (Chris Fonnesbeck) and
-subset of Contributors, called Core Developers, whose active and consistent
+subset of Contributors, called Core Contributors, whose active and consistent
 contributions have been recognized by their receiving “commit rights” to the
 Project GitHub repositories. In general all Project decisions are made through
 consensus among the Core Developers with input from the Community. The BDFL
@@ -57,39 +59,57 @@ decision on a matter.
 
 While this approach has served us well, as the Project grows and faces more
 legal and financial decisions and interacts with other institutions, we see a
-need for a more formal governance model. Moving forward The Project leadership
-will consist of a BDFL and Steering Council. We view this governance model as
-the formalization of what we are already doing, rather than a change in
-direction.
+need for a more formal governance and organization model.
+We view this governance model as the formalization of what we are already doing,
+rather than a change in direction.
 
-BDFL
-----
+## Community and Team Architecture
+The PyMC community is organized in an onion-like fashion.
+The tiers relevant to the project governance are listed below sorted by
+increasing responsibility. Due to the onion-like structure, members of a tier are
+also members of all the tiers listed above:
+
+* Contributors
+* Regular Contributors
+* Core Contributors
+* Steering Council
+* BDFL
+
+Regular Contributors comprise what we understand as the PyMC Team.
+The Team will generally act as a single unit, except for some specific
+questions where dedicated teams will prevail.
+The PyMC project currently counts with the Developer and Documentation teams.
+
+Anyone working with PyMC has the responsibility to personally uphold
+the Code of Conduct. Core Contributors have the additional responsibility
+of _enforcing_ the Code of Conduct to maintain a safe community.
+
+## BDFL
 
 The Project will have a BDFL (Benevolent Dictator for Life), who is currently
 Chris Fonnesbeck. As Dictator, the BDFL has the authority to make all final
 decisions for The Project. As Benevolent, the BDFL, in practice chooses to
 defer that authority to the consensus of the community discussion channels and
 the Steering Council (see below). It is expected, and in the past has been the
-case, that the BDFL will only rarely assert his/her final authority. Because
+case, that the BDFL will only rarely assert their final authority. Because
 rarely used, we refer to BDFL’s final authority as a “special” or “overriding”
 vote. When it does occur, the BDFL override typically happens in situations
 where there is a deadlock in the Steering Council or if the Steering Council
 asks the BDFL to make a decision on a specific matter. To ensure the
 benevolence of the BDFL, The Project encourages others to fork the project if
 they disagree with the overall direction the BDFL is taking. The BDFL is chair
-of the Steering Council (see below) and may delegate his/her authority on a
-particular decision or set of decisions to any other Council member at his/her
+of the Steering Council (see below) and may delegate their authority on a
+particular decision or set of decisions to any other Council member at their
 discretion.
 
-The BDFL can appointing his/her successor, but it is expected that the Steering
+The BDFL can appoint their successor, but it is expected that the Steering
 Council would be consulted on this decision. If the BDFL is unable to appoint a
 successor, the Steering Council will make a suggestion or suggestions to the
 Main NumFOCUS Board. While the Steering Council and Main NumFOCUS Board will
 work together closely on the BDFL selection process, the Main NUMFOCUS Board
 will make the final decision.
 
-Steering Council
-----------------
+## Steering Council
 
 The Project will have a Steering Council that consists of Project Contributors
 who have produced contributions that are substantial in quality and quantity,
@@ -121,7 +141,12 @@ In particular, the Council may:
 -   Make decisions when regular community discussion doesn’t produce consensus
     on an issue in a reasonable time frame.
 
+### Current Steering Council
+
 The current Steering Council membership comprises:
+
+<!-- should be add betweeh parentheses the company they work for
+if they are an institutional contributor/council member -->
 
 - Colin Carroll
 - Peadar Coyle
@@ -137,13 +162,11 @@ The current Steering Council membership comprises:
 ### Council membership
 
 To become eligible for being a Steering Council Member an individual must be a
-Project Contributor who has produced contributions that are substantial in
+Core Contributor who has produced contributions that are substantial in
 quality and quantity, and sustained over at least one year. Potential Council
 Members are nominated by existing Council members and voted upon by the
 existing Council after asking if the potential Member is interested and willing
-to serve in that capacity. The Council will be initially formed from the set of
-existing Core Developers who, as of late 2014, have been significantly active
-over the last year.
+to serve in that capacity.
 
 When considering potential Members, the Council will look at candidates with a
 comprehensive view of their contributions. This will include but is not limited
@@ -156,15 +179,18 @@ backgrounds, viewpoints and talents in our team, which is why we explicitly do
 not define code as the sole metric on which council membership will be
 evaluated.
 
+Council membership is assigned for a two year period, with no limit on how many
+periods can be served.
+
 If a Council member becomes inactive in the project for a period of one year,
 they will be considered for removal from the Council. Before removal, inactive
 Member will be approached by the BDFL to see if they plan on returning to
 active participation. If not they will be removed immediately upon a Council
 vote. If they plan on returning to active participation soon, they will be
-given a grace period of one year. If they don’t return to active participation
+given a grace period of half year. If they don’t return to active participation
 within that time period they will be removed by vote of the Council without
 further grace period. All former Council members can be considered for
-membership again at any time in the future, like any other Project Contributor.
+membership again at any time in the future, like any other Core Contributor.
  Retired Council members will be listed on the project website, acknowledging
 the period during which they were active in the Council.
 
@@ -172,24 +198,6 @@ The Council reserves the right to eject current Members, other than the BDFL,
 if they are deemed to be actively harmful to the project’s well-being, and
 attempts at communication and conflict resolution have failed.
 
-### Conflict of interest
-
-It is expected that the BDFL and Council Members will be employed at a wide
-range of companies, universities and non-profit organizations. Because of this,
-it is possible that Members will have conflict of interests. Such conflict of
-interests include, but are not limited to:
-
--   Financial interests, such as investments, employment or contracting work,
-    outside of The Project that may influence their work on The Project.
--   Access to proprietary information of their employer that could potentially
-    leak into their work with the Project.
-
-All members of the Council, BDFL included, shall disclose to the rest of the
-Council any conflict of interest they may have. Members with a conflict of
-interest in a particular issue may participate in Council discussions on that
-issue, but must recuse themselves from voting on the issue. If the BDFL has
-recused him/herself for a particular decision, they will appoint a substitute
-BDFL for that decision.
 
 ### Private communications of the Council
 
@@ -236,6 +244,7 @@ interactions with NumFOCUS.
     contracting work (including the reportee, i.e. the reportee + 1 is the
     max). This avoids effective majorities resting on one person.
 
+#### Current NumFOCUS Subcommitee
 The current NumFOCUS Subcommittee consists of:
 
 - Peadar Coyle
@@ -244,7 +253,81 @@ The current NumFOCUS Subcommittee consists of:
 - Jon Sedar
 - Thomas Wiecki
 
-### Institutional Partners and Funding
+## Core Contributors
+Core Contributors are those individuals with commit rights to any of
+the repositories of the PyMC Project. Therefore, some Core Contributors
+may act as Regular or Core Contributors depending on the work at hand.
+We believe this to be necessary given the current size and scope of
+the PyMC project. Contributors may be proficient in some areas of the
+project while being inexperienced in some others.
+
+### Core Contributor membership
+To become a Core Contributor, one must already be a Regular Contributor.
+Core Contributors can nominate any Regular Contributor to receive commit rights
+and become a Core Contributor. For the nomination to go forward, it has to be
+ratified by the Steering Council and the BDFL.
+
+Current Core Contributors are listed below in the Team section
+
+<!-- we could list them here too, but for now I wanted to minimize duplication -->
+
+Those with no specific team are part of all dedicated teams
+
+## Regular Contributors
+Regular Contributors are those individuals who can participate from
+the Project private communication channels.
+
+### Regular Contributor membership
+Regular Contributors can nominate any Contributor to participate in the
+Project private communication channels and become a Regular Contributor.
+For the nomination to go forward, it has to be ratified by
+the Steering Council and the BDFL.
+
+Current Regular Contributors are listed below in the Team section
+
+## Conflict of interest
+
+It is expected that the BDFL, Council Members and Contributors will be
+employed at a wide range of companies, universities and non-profit organizations.
+Because of this, it is possible that Members will have conflict of interests.
+Such conflict of interests include, but are not limited to:
+
+-   Financial interests, such as investments, employment or contracting work,
+    outside of The Project that may influence their work on The Project.
+-   Access to proprietary information of their employer that could potentially
+    leak into their work with the Project.
+
+All members of the Council, BDFL included, shall disclose to the rest of the
+Council any conflict of interest they may have. Members with a conflict of
+interest in a particular issue may participate in Council discussions on that
+issue, but must recuse themselves from voting on the issue. If the BDFL has
+recused him/herself for a particular decision, they will appoint a substitute
+BDFL for that decision.
+
+## Team Organization
+<!-- do we want a "general" team or something of the sort? I (Oriol) for
+example am not sure I should be a core developer, as I have not contributed
+much code nor related to documentation but I am acting as Outreachy Org Admin,
+was a Diversity Chair at PyMCon, are active on discourse...
+which I think are important and don't fit any of the teams -->
+
+### Developer Team
+<!-- list regular and core contributors alphabetically, add (core) to core contributors -->
+
+#### Current Developer Team
+- Oriol Abril-Pla
+- Chris Fonnesbeck (core)
+
+### Documentation Team
+
+#### Current Documentation Team
+- Oriol Abril-Pla (core)
+- Oriol Abril-Pla (core)
+
+
+
+
+## Institutional Partners and Funding
 
 The BDFL and Steering Council are the primary leadership for the project. No
 outside institution, individual or legal entity has the ability to own,
@@ -318,4 +401,16 @@ Partners, with associated benefits:
 -   Only Institutional Contributors are invited to the Institutional Partners
     Workshop and bi-annual PyMC Developer Meeting
 
-The PyMC3 project currently recognizes Quantopian as a Tier 1 Institutional Partner, with Thomas Wiecki and Adrian Seyboldt as their institutional contributors and council members.
+The PyMC3 project currently recognizes PyMC Labs as a Tier 1 Institutional Partner,
+with Thomas Wiecki and Adrian Seyboldt as their institutional contributors
+and council members.
+
+## Sponsors
+Sponsors are Organizations that provide significant funding to the PyMC project
+either directly or by sponsoring PyMCon.
+
+Sponsors will be recognized by placing their logo on the PyMC website but will have
+no extra benefits related to the Project. Note that PyMCon sponsors may have
+extra benefits but those will be related to the conference, not the Project.
+
+<!-- note: search numpy's definition numpy.org/about -->
