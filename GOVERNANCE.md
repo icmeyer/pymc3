@@ -6,9 +6,9 @@ The PyMC Project (The Project) is an open source software project
 affiliated with the 501c3 NumFocus Foundation. The goal of The Project is to
 develop open source software and deploy open and public websites and services
 for reproducible, exploratory and interactive computing. The Software developed
-by The Project is released under the Apache 2 open source license,
+by The Project is released under OSI approved open source licenses,
 developed openly and hosted in public GitHub repositories under the
-[GitHub organization](https://github.com/pymc-devs/pymc3). Examples of
+[GitHub organization](https://github.com/pymc-devs). Examples of
 Project Software include the PyMC3 library and its documentation, etc.
 The Services run by the Project consist of public websites and web-services
 that are hosted at [http://docs.pymc.io](http://docs.pymc.io)
@@ -17,7 +17,7 @@ The Project is developed by a team of distributed developers, called
 Contributors. Contributors are individuals who have contributed code,
 documentation, designs or other work to one or more Project repositories,
 or who have done significant work to empower the Community,
-moderating on [Discourse](),
+moderating on [Discourse](http://docs.pymc.io),
 organizing [PyMCon]() or helped on other platforms and events.
 Anyone can be a Contributor. Contributors can be affiliated with any legal
 entity or none. Contributors participate in the project by submitting,
@@ -25,7 +25,7 @@ reviewing and discussing GitHub Pull Requests and Issues and participating in
 open and public Project discussions on GitHub, Slack, Gitter chat rooms and mailing lists. The foundation of Project participation is openness
 and transparency.
 
-There have been over 100 Contributors to the Project, their contributions are listed in the logs of the PyMC repositories as well as those of associated projects.
+There have been over 250 Contributors to the Project, their contributions are listed in the logs of the PyMC GitHub repositories as well as those of associated projects and venues.
 
 The Project Community consists of all Contributors and Users of the Project.
 Contributors work on behalf of and are responsible to the larger Project
@@ -50,7 +50,7 @@ The foundations of Project governance are:
 -   Institutional Neutrality
 
 Traditionally, Project leadership was provided by a BDFL (Chris Fonnesbeck) and
-subset of Contributors, called Core Contributors, whose active and consistent
+subset of Contributors, called Core Developers, whose active and consistent
 contributions have been recognized by their receiving “commit rights” to the
 Project GitHub repositories. In general all Project decisions are made through
 consensus among the Core Developers with input from the Community. The BDFL
@@ -66,21 +66,22 @@ rather than a change in direction.
 ## Community and Team Architecture
 The PyMC community is organized in an onion-like fashion.
 The tiers relevant to the project governance are listed below sorted by
-increasing responsibility. Due to the onion-like structure, members of a tier are
-also members of all the tiers listed above:
+increasing responsibility. Due to the onion-like structure, members of a group are
+also members of all the groups listed above:
 
 * Contributors
-* Regular Contributors
+* Recurring Contributors
 * Core Contributors
 * Steering Council
 * BDFL
 
-Regular Contributors comprise what we understand as the PyMC Team.
+Recurring Contributors comprise what we understand as the PyMC Team.
 The Team will generally act as a single unit, except for some specific
 questions where dedicated teams will prevail.
 The PyMC project currently counts with the Developer and Documentation teams.
+Team members can be part of one, some or none of these dedicated teams.
 
-Anyone working with PyMC has the responsibility to personally uphold
+Anyone working with The Project has the responsibility to personally uphold
 the Code of Conduct. Core Contributors have the additional responsibility
 of _enforcing_ the Code of Conduct to maintain a safe community.
 
@@ -145,7 +146,7 @@ In particular, the Council may:
 
 The current Steering Council membership comprises:
 
-<!-- should be add betweeh parentheses the company they work for
+<!-- should be add between parentheses the company they work for
 if they are an institutional contributor/council member -->
 
 - Colin Carroll
@@ -217,13 +218,13 @@ should conduct their business in an open and public manner unless privacy is
 specifically called for. Private subcommittee communications should happen on
 the main private mailing list of the Council unless specifically called for.
 
-Even if the BDFL does not sit on a specific subcommittee, he/she still retains
+Even if the BDFL does not sit on a specific subcommittee, they still retains
 override authority on the subcommittee's decisions. However, it is expected that
-he/she will appoint a delegate to oversee the subcommittee's decisions, and
+they will appoint a delegate to oversee the subcommittee's decisions, and
 explicit intervention from the BDFL will only be sought if the committee
 disagrees with the delegate's decision and no resolution is possible within the
 subcommittee. This is a different situation from a BDFL delegate for a specific
-decision, or a recusal situation, in which the BDFL gives up his/her authority
+decision, or a recusal situation, in which the BDFL gives up their authority
 to someone else in full.
 
 ### NumFOCUS Subcommittee
@@ -231,18 +232,18 @@ to someone else in full.
 The Council will maintain one narrowly focused subcommittee to manage its
 interactions with NumFOCUS.
 
--   The NumFOCUS Subcommittee is comprised of 5 persons who manage project
-    funding that comes through NumFOCUS. It is expected that these funds will
-    be spent in a manner that is consistent with the non-profit mission of
-    NumFOCUS and the direction of the Project as determined by the full
-    Council.
--   This Subcommittee shall NOT make decisions about the direction, scope or
-    technical direction of the Project.
--   This Subcommittee will have 5 members, 4 of whom will be current Council
-    Members and 1 of whom will be external to the Steering Council. No more
-    than 2 Subcommitee Members can report to one person through employment or
-    contracting work (including the reportee, i.e. the reportee + 1 is the
-    max). This avoids effective majorities resting on one person.
+- The NumFOCUS Subcommittee is comprised of 5 persons who manage project
+  funding that comes through NumFOCUS. It is expected that these funds will
+  be spent in a manner that is consistent with the non-profit mission of
+  NumFOCUS and the direction of the Project as determined by the full
+  Council.
+- This Subcommittee shall NOT make decisions about the direction, scope or
+  technical direction of the Project.
+- This Subcommittee will have 5 members, 4 of whom will be current Council
+  Members and 1 of whom will be external to the Steering Council. No more
+  than 2 Subcommitee Members can report to one person through employment or
+  contracting work (including the reportee, i.e. the reportee + 1 is the
+  max). This avoids effective majorities resting on one person.
 
 #### Current NumFOCUS Subcommitee
 The current NumFOCUS Subcommittee consists of:
@@ -254,36 +255,48 @@ The current NumFOCUS Subcommittee consists of:
 - Thomas Wiecki
 
 ## Core Contributors
-Core Contributors are those individuals with commit rights to any of
-the repositories of the PyMC Project. Therefore, some Core Contributors
-may act as Regular or Core Contributors depending on the work at hand.
+Core Contributors are those individuals with commit or managing rights to any of
+the repositories or services of the PyMC Project. Therefore, some Core Contributors
+may act as Recurring or Core Contributors depending on the work at hand.
 We believe this to be necessary given the current size and scope of
 the PyMC project. Contributors may be proficient in some areas of the
 project while being inexperienced in some others.
 
 ### Core Contributor membership
-To become a Core Contributor, one must already be a Regular Contributor.
-Core Contributors can nominate any Regular Contributor to receive commit rights
+To become a Core Contributor, one must already be a Recurring Contributor.
+Core Contributors can nominate any Recurring Contributor to receive commit rights
 and become a Core Contributor. For the nomination to go forward, it has to be
 ratified by the Steering Council and the BDFL.
 
-Current Core Contributors are listed below in the Team section
+### Current Core Contributors
 
-<!-- we could list them here too, but for now I wanted to minimize duplication -->
+<!-- we could list them here or link to the pymc-devs organization, however,
+linking to the pymc-devs org would require the core team not being secret.
+I actually don't know if this is already the case, if it's possible even nor
+obviously how it would be done. I do believe it's important to be clear and
+explicit about who are core contributors, especially for people interested
+in joining the project to reach out, but also for organizations and meet-ups
+to ask for speakers.
 
-Those with no specific team are part of all dedicated teams
+Regarding the reaching out, we do have the project mail and some people
+may not desire being contacted privately. I also think we should have some
+rules or guidance on this here and/or in the community/contributing pages.-->
 
-## Regular Contributors
-Regular Contributors are those individuals who can participate from
-the Project private communication channels.
+## Recurring Contributors
+Recurring Contributors are those individuals who can participate from
+The Project private communication channels.
 
-### Regular Contributor membership
-Regular Contributors can nominate any Contributor to participate in the
-Project private communication channels and become a Regular Contributor.
+### Recurring Contributor membership
+Recurring Contributors can nominate any Contributor to participate in the
+Project private communication channels and become a Recurring Contributor.
 For the nomination to go forward, it has to be ratified by
 the Steering Council and the BDFL.
 
-Current Regular Contributors are listed below in the Team section
+#### Current Recurring Contributors
+
+- everyone on slack! This may be too long so it could be a good idea to
+format as a table instead or to put within a `<details>` tag so
+it's hidden by default while still available publicly
 
 ## Conflict of interest
 
@@ -292,40 +305,79 @@ employed at a wide range of companies, universities and non-profit organizations
 Because of this, it is possible that Members will have conflict of interests.
 Such conflict of interests include, but are not limited to:
 
--   Financial interests, such as investments, employment or contracting work,
-    outside of The Project that may influence their work on The Project.
--   Access to proprietary information of their employer that could potentially
-    leak into their work with the Project.
+- Financial interests, such as investments, employment or contracting work,
+  outside of The Project that may influence their work on The Project.
+- Access to proprietary information of their employer that could potentially
+  leak into their work with the Project.
 
 All members of the Council, BDFL included, shall disclose to the rest of the
 Council any conflict of interest they may have. Members with a conflict of
 interest in a particular issue may participate in Council discussions on that
 issue, but must recuse themselves from voting on the issue. If the BDFL has
-recused him/herself for a particular decision, they will appoint a substitute
+recused themselves for a particular decision, they will appoint a substitute
 BDFL for that decision.
 
 ## Team Organization
-<!-- do we want a "general" team or something of the sort? I (Oriol) for
-example am not sure I should be a core developer, as I have not contributed
-much code nor related to documentation but I am acting as Outreachy Org Admin,
-was a Diversity Chair at PyMCon, are active on discourse...
-which I think are important and don't fit any of the teams -->
+<!-- Open questions
+
+1. do we want to give commit rights to core contributors to some repositories
+only based on the team they are part of?
+
+(quick discussion with myself - Oriol) With pymc3 being the source of the
+website and a large part of the docs, both members of developer and documentation
+team need to have commit rights there, so it would basically mean that
+devs would not have commit rights to pymc-examples and/or resources repo.
+**However**, this would become much more relevant and sensible if we had more
+teams! (see next question).
+
+2. do we want to create/formalize other teams?
+
+Some ideas are events/pymcon and community/discourse teams. PyMCon is organized by
+a clear subset of the team, with plenty of help from "outsiders", so it makes sense
+for this to be a team. With the current definitions, I think Sid and Christian
+would automatically become core contributors by doing that due to their commit/admin
+rights to pymcon repo/pymcon webex+zulip.
+
+Discourse is also managed by a clear subset of the team who have the
+moderator/admin rights, and there are users that are more active than most/all
+devs, so it doesn't sound too far-fetched to bring them onboard in
+order to better distribute the work and hopefully empower Discourse even more.
+-->
+
+As stated previously, The Team will generally act as a single unit,
+except for some specific questions where dedicated teams will prevail.
+These dedicated teams have no difference in how they are governed.
+Decisions should be reached by consensus within the team with the Steering
+Council and the BDFL acting if necessary.
+
+The dedicated teams are a work units with two main objectives: better
+distributing the work related to The Project, and to better showcase all the task
+involved in The Project to attract more diverse Contributors.
+
+The PyMC project currently counts with the Developer and Documentation teams.
+Team members can be part of one, some or none of these dedicated teams.
 
 ### Developer Team
-<!-- list regular and core contributors alphabetically, add (core) to core contributors -->
+The focus of the developer team is the probabilistic programming library
+and flagship of The Project, [PyMC3](https://github.com/pymc-devs/pymc3).
 
 #### Current Developer Team
-- Oriol Abril-Pla
-- Chris Fonnesbeck (core)
+<!-- list recurring and core contributors alphabetically to emphasise the
+team aspect, not the core/recurring "status".
+
+As there are already lists of core and recurring contributors,
+it is probably not relevant to distinguish core and recurring contributors
+at all here. -->
+
+- Chris Fonnesbeck
 
 ### Documentation Team
+The focus of the documentation team is not only documenting the PyMC3 library,
+but also making sure there are resources to learn Bayesian statistics with
+PyMC3.
 
 #### Current Documentation Team
-- Oriol Abril-Pla (core)
-- Oriol Abril-Pla (core)
-
-
-
+- Oriol Abril-Pla
 
 ## Institutional Partners and Funding
 
@@ -383,23 +435,23 @@ Partners, with associated benefits:
 
 **Tier 1** = an institution with at least one Institutional Council Member
 
--   Acknowledged on the PyMC websites, in talks and T-shirts.
--   Ability to acknowledge their own funding sources on the PyMC
-    websites, in talks and T-shirts.
--   Unlimited participation in the annual Institutional Partners Workshop, held
-    during the (planned) annual PyMC Project Retreat. This allows the
-    Institutional Partner to invite as many of their own employees and funding
-    sources and collaborators as they want, even if they are not project
-    Contributors or Council Members.
--   Ability to influence the project through the participation of their Council
-    Member.
--   Council Members are invited to the bi-annual PyMC Developer Meeting.
+- Acknowledged on the PyMC websites, in talks and T-shirts.
+- Ability to acknowledge their own funding sources on the PyMC
+  websites, in talks and T-shirts.
+- Unlimited participation in the annual Institutional Partners Workshop, held
+  during the (planned) annual PyMC Project Retreat. This allows the
+  Institutional Partner to invite as many of their own employees and funding
+  sources and collaborators as they want, even if they are not project
+  Contributors or Council Members.
+- Ability to influence the project through the participation of their Council
+  Member.
+- Council Members are invited to the bi-annual PyMC Developer Meeting.
 
 **Tier 2** = an institution with at least one Institutional Contributor
 
--   Same benefits as Tier 1 level Partners, but:
--   Only Institutional Contributors are invited to the Institutional Partners
-    Workshop and bi-annual PyMC Developer Meeting
+- Same benefits as Tier 1 level Partners, but:
+- Only Institutional Contributors are invited to the Institutional Partners
+  Workshop and bi-annual PyMC Developer Meeting
 
 The PyMC3 project currently recognizes PyMC Labs as a Tier 1 Institutional Partner,
 with Thomas Wiecki and Adrian Seyboldt as their institutional contributors
@@ -410,7 +462,7 @@ Sponsors are Organizations that provide significant funding to the PyMC project
 either directly or by sponsoring PyMCon.
 
 Sponsors will be recognized by placing their logo on the PyMC website but will have
-no extra benefits related to the Project. Note that PyMCon sponsors may have
-extra benefits but those will be related to the conference, not the Project.
+no extra benefits related to The Project. Note that PyMCon sponsors may have
+extra benefits but those will be related to the conference, not The Project.
 
 <!-- note: search numpy's definition numpy.org/about -->
