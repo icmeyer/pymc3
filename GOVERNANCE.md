@@ -183,6 +183,10 @@ evaluated.
 Council membership is assigned for a two year period, with no limit on how many
 periods can be served.
 
+Council members can renounce at any time and are
+encouraged to do so if they foresee they won't be able to attend their
+responsibilities for an extended interval of time.
+
 If a Council member becomes inactive in the project for a period of one year,
 they will be considered for removal from the Council. Before removal, inactive
 Member will be approached by the BDFL to see if they plan on returning to
@@ -199,6 +203,18 @@ The Council reserves the right to eject current Members, other than the BDFL,
 if they are deemed to be actively harmful to the project’s well-being, and
 attempts at communication and conflict resolution have failed.
 
+<!-- todos:
+
+- vote of no conficence. Either core or recurring contributors
+should also be able to remove people from the council, even if by a very high
+majority vote. IMO (Oriol) this point is not up for discussion in itself, only in
+how it should happen.
+
+- election discussion. Do we want to keep the current council votes new council
+  or should core/recurring contributors vote?
+
+- Should there be a minimum of 1 council member from each dedicated team?
+-->
 
 ### Private communications of the Council
 
