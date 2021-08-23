@@ -90,6 +90,7 @@ class BaseHMC(arraystep.GradientSharedStep):
         self.adapt_step_size = adapt_step_size
         self.Emax = Emax
         self.iter_count = 0
+        self.n_accepted = 0
         size = self._logp_dlogp_func.size
 
         self.step_size = step_scale / (size ** 0.25)
@@ -203,6 +204,9 @@ class BaseHMC(arraystep.GradientSharedStep):
             self._warnings.append(warning)
 
         self.iter_count += 1
+        if hmc_step.accept_stat:
+            self.n_accepted += 1
+
         if not self.tune:
             self._samples_after_tune += 1
 

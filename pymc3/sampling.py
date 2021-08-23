@@ -237,6 +237,7 @@ def sample(
     step=None,
     init="auto",
     n_init=200000,
+    n_adapt=101,
     start=None,
     trace=None,
     chain_idx=0,
@@ -495,6 +496,7 @@ def sample(
                 init=init,
                 chains=chains,
                 n_init=n_init,
+                n_adapt=n_adapt,
                 model=model,
                 random_seed=random_seed,
                 progressbar=progressbar,
@@ -2000,6 +2002,7 @@ def init_nuts(
     init="auto",
     chains=1,
     n_init=500000,
+    n_adapt=101,
     model=None,
     random_seed=None,
     progressbar=True,
@@ -2091,12 +2094,12 @@ def init_nuts(
         start = [model.test_point] * chains
         mean = np.mean([model.dict_to_array(vals) for vals in start], axis=0)
         var = np.ones_like(mean)
-        potential = quadpotential.QuadPotentialDiagAdapt(model.ndim, mean, var, 10)
+        potential = quadpotential.QuadPotentialDiagAdapt(model.ndim, mean, var, 10, n_adapt)
     elif init == "jitter+adapt_diag":
         start = _init_jitter(model, chains, jitter_max_retries)
         mean = np.mean([model.dict_to_array(vals) for vals in start], axis=0)
         var = np.ones_like(mean)
-        potential = quadpotential.QuadPotentialDiagAdapt(model.ndim, mean, var, 10)
+        potential = quadpotential.QuadPotentialDiagAdapt(model.ndim, mean, var, 10, n_adapt)
     elif init == "advi+adapt_diag_grad":
         approx: pm.MeanField = pm.fit(
             random_seed=random_seed,
@@ -2114,7 +2117,7 @@ def init_nuts(
         mean = approx.bij.rmap(approx.mean.get_value())
         mean = model.dict_to_array(mean)
         weight = 50
-        potential = quadpotential.QuadPotentialDiagAdaptGrad(model.ndim, mean, cov, weight)
+        potential = quadpotential.QuadPotentialDiagAdaptGrad(model.ndim, mean, cov, weight, n_adapt)
     elif init == "advi+adapt_diag":
         approx = pm.fit(
             random_seed=random_seed,
@@ -2132,7 +2135,7 @@ def init_nuts(
         mean = approx.bij.rmap(approx.mean.get_value())
         mean = model.dict_to_array(mean)
         weight = 50
-        potential = quadpotential.QuadPotentialDiagAdapt(model.ndim, mean, cov, weight)
+        potential = quadpotential.QuadPotentialDiagAdapt(model.ndim, mean, cov, weight, n_adapt)
     elif init == "advi":
         approx = pm.fit(
             random_seed=random_seed,
@@ -2173,12 +2176,12 @@ def init_nuts(
         start = [model.test_point] * chains
         mean = np.mean([model.dict_to_array(vals) for vals in start], axis=0)
         cov = np.eye(model.ndim)
-        potential = quadpotential.QuadPotentialFullAdapt(model.ndim, mean, cov, 10)
+        potential = quadpotential.QuadPotentialFullAdapt(model.ndim, mean, cov, 10, n_adapt)
     elif init == "jitter+adapt_full":
         start = _init_jitter(model, chains, jitter_max_retries)
         mean = np.mean([model.dict_to_array(vals) for vals in start], axis=0)
         cov = np.eye(model.ndim)
-        potential = quadpotential.QuadPotentialFullAdapt(model.ndim, mean, cov, 10)
+        potential = quadpotential.QuadPotentialFullAdapt(model.ndim, mean, cov, 10, n_adapt)
     else:
         raise ValueError(f"Unknown initializer: {init}.")
 
