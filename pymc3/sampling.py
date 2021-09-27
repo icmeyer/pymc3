@@ -2175,7 +2175,8 @@ def init_nuts(
     elif init == "adapt_full":
         start = [model.test_point] * chains
         mean = np.mean([model.dict_to_array(vals) for vals in start], axis=0)
-        cov = np.eye(model.ndim)
+        # Use variable initialized covariance
+        cov = model.basic_RVs[0].distribution.cov.value
         potential = quadpotential.QuadPotentialFullAdapt(model.ndim, mean, cov, 10, n_adapt)
     elif init == "jitter+adapt_full":
         start = _init_jitter(model, chains, jitter_max_retries)
